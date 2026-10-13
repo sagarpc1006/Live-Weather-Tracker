@@ -19,6 +19,7 @@ if (st.button('Submit')):
     weather_condition=data['weather'][0]['description']
     name=data['name']
     country=data['sys']['country']
+    st.subheader(f'{country},{city}')
 
     col1,col2=st.columns(2)
     col3,col4=st.columns(2)
