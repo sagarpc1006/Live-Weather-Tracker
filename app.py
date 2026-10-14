@@ -11,9 +11,9 @@ API_KEY=os.getenv('WEATHER_API_KEY')
 API_KEY='cb40bebfbd2244289b4d5e4441661621'
 st.set_page_config(page_title='Weather APP',page_icon='😂')
 st.title('Weather APP 🌤️')
-st.write('Enter the City name and click the button to fetch weather data')
+st.subheader('Enter the City name and click the button to fetch weather data')
 
-city = st.text_input('Enter the city name :')
+city = st.text_input('')
 if (st.button('Submit')):
     response=requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric')
     if(response.status_code == 200):
